@@ -46,9 +46,32 @@ const addBlocks = () => {
 
 addBlocks();
 
+//draw the user
+const drawUser = () => {
+  user.style.left = currentUserPossition[0] + "px";
+  user.style.bottom = currentUserPossition[1] + "px";
+};
+
 //add user
 const user = document.createElement("div");
 user.classList.add("user");
-user.style.left = currentUserPossition[0] + "px";
-user.style.bottom = currentUserPossition[1] + "px";
+drawUser();
 grid.appendChild(user);
+
+//move user
+const moveUser = (ev) => {
+  switch (ev.key) {
+    case "ArrowLeft":
+      currentUserPossition[0] -= 20;
+      drawUser();
+      break;
+    case "ArrowRight":
+      currentUserPossition[0] += 20;
+      drawUser();
+      break;
+    default:
+      break;
+  }
+};
+
+document.addEventListener("keydown", moveUser);
