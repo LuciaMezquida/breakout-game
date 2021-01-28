@@ -2,9 +2,16 @@
 const grid = document.querySelector(".grid");
 const blockWidth = 100;
 const blockHeight = 20;
+
 const boardWidth = 450;
+
 const startUserPossition = [230, 10];
 let currentUserPossition = startUserPossition;
+
+const startBallPossition = [270, 40];
+let currentBallPossition = startBallPossition;
+
+///////--BLOCKS--///////
 
 //create block
 class Block {
@@ -34,6 +41,7 @@ const blocks = [
   new Block(340, 210),
   new Block(450, 210),
 ];
+
 //draw all my block
 const addBlocks = () => {
   for (let i = 0; i < blocks.length; i++) {
@@ -44,8 +52,9 @@ const addBlocks = () => {
     grid.appendChild(block);
   }
 };
-
 addBlocks();
+
+///////--USER--///////
 
 //draw the user
 const drawUser = () => {
@@ -80,7 +89,24 @@ const moveUser = (ev) => {
 };
 document.addEventListener("keydown", moveUser);
 
+///////--BALL--///////
+
+//draw the ball
+const drawBall = () => {
+  ball.style.left = currentBallPossition[0] + "px";
+  ball.style.bottom = currentBallPossition[1] + "px";
+};
+
 //add ball
 const ball = document.createElement("div");
 ball.classList.add("ball");
+drawBall();
 grid.appendChild(ball);
+
+//move ball
+const moveBall = () => {
+  currentBallPossition[0] += 2;
+  currentBallPossition[1] += 2;
+  drawBall();
+};
+setInterval(moveBall, 30);
