@@ -6,4 +6,22 @@
   bottom: 0;
   width: 100vw;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  &__nav {
+    display: flex;
+  }
+  &__link {
+    color: $color-light;
+    padding-right: 1.5rem;
+    transition: ease 0.8s;
+    &:hover {
+      color: $color-main;
+    }
+  }
+}
+.fa-cat {
+  color: $color-main;
 }
