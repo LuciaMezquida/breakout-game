@@ -1,5 +1,7 @@
-.page__header {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
+.header {
+  &__title {
+    font-family: $font-main;
+    color: $color-main;
+    padding: 1rem 0 0 1rem;
+  }
 }
