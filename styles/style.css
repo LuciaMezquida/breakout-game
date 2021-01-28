@@ -3,14 +3,18 @@
   margin: 0;
   padding: 0;
 }
+.score-container {
+  height: 10vh;
+}
 .score {
   text-align: center;
 }
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 .grid {
   position: absolute;

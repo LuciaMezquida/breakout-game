@@ -1,5 +1,6 @@
 "use strict";
 const grid = document.querySelector(".grid");
+const scoreDisplay = document.querySelector(".score");
 const blockWidth = 100;
 const blockHeight = 20;
 const ballDiameter = 20;
@@ -8,6 +9,7 @@ const boardHeight = 300;
 
 let xDirection = 2;
 let yDirection = 2;
+let score = 0;
 
 const startUserPossition = [230, 10];
 let currentUserPossition = startUserPossition;
@@ -89,8 +91,6 @@ const moveUser = (ev) => {
         drawUser();
       }
       break;
-    default:
-      break;
   }
 };
 document.addEventListener("keydown", moveUser);
@@ -118,8 +118,40 @@ const moveBall = () => {
 };
 timerId = setInterval(moveBall, 30);
 
-//check for collisions
+//////--CHECK FOR COLLISIONS--///////
 const checkForCollisions = () => {
+  //check for block collisions
+  for (let i = 0; i < blocks.length; i++) {
+    if (
+      currentBallPossition[0] > blocks[i].bottomLeft[0] &&
+      currentBallPossition[0] < blocks[i].bottomRight[0] &&
+      currentBallPossition[1] + ballDiameter > blocks[i].bottomLeft[1] &&
+      currentBallPossition[1] < blocks[i].topLeft[1]
+    ) {
+      const allBlocks = document.querySelectorAll(".block");
+      allBlocks[i].classList.remove("block");
+      blocks.splice(i, 1);
+      changeDirection();
+      score++;
+      scoreDisplay.innerHTML = score;
+
+      //check for win
+      if (blocks.length === 0) {
+        scoreDisplay.innerHTML = "YOU WIN!!!";
+        clearInterval(timerId);
+        document.removeEventListener("keydown", moveUser);
+      }
+    }
+  }
+  //check for user collisions
+  if (
+    currentBallPossition[0] > currentUserPossition[0] &&
+    currentBallPossition[0] < currentUserPossition[0] + blockWidth &&
+    currentBallPossition[1] > currentUserPossition[1] &&
+    currentBallPossition[1] < currentUserPossition[1] + blockHeight
+  ) {
+    changeDirection();
+  }
   //check for wall collisions
   if (
     currentBallPossition[0] >= boardWidth - ballDiameter ||
@@ -131,6 +163,8 @@ const checkForCollisions = () => {
   //check for game over
   if (currentBallPossition[1] <= 0) {
     clearInterval(timerId);
+    scoreDisplay.innerHTML = "LOOOOSER!!!!";
+    document.removeEventListener("keydown", moveUser);
   }
 };
 const changeDirection = () => {
