@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .grid {
   position: absolute;
   width: 560px;
@@ -14,5 +20,12 @@
   position: absolute;
   width: 100px;
   height: 20px;
+  background-color: #ff8800;
+}
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   background-color: #ff8800;
 }

@@ -2,6 +2,7 @@
 const grid = document.querySelector(".grid");
 const blockWidth = 100;
 const blockHeight = 20;
+const boardWidth = 450;
 const startUserPossition = [230, 10];
 let currentUserPossition = startUserPossition;
 
@@ -62,16 +63,24 @@ grid.appendChild(user);
 const moveUser = (ev) => {
   switch (ev.key) {
     case "ArrowLeft":
-      currentUserPossition[0] -= 20;
-      drawUser();
+      if (currentUserPossition[0] > 10) {
+        currentUserPossition[0] -= 20;
+        drawUser();
+      }
       break;
     case "ArrowRight":
-      currentUserPossition[0] += 20;
-      drawUser();
+      if (currentUserPossition[0] < boardWidth) {
+        currentUserPossition[0] += 20;
+        drawUser();
+      }
       break;
     default:
       break;
   }
 };
-
 document.addEventListener("keydown", moveUser);
+
+//add ball
+const ball = document.createElement("div");
+ball.classList.add("ball");
+grid.appendChild(ball);
