@@ -21,18 +21,18 @@
   position: absolute;
   width: 100px;
   height: 20px;
-  background-color: blue;
+  background-color: $color-main;
 }
 .user {
   position: absolute;
   width: 100px;
   height: 20px;
-  background-color: #ff8800;
+  background-color: $color-main;
 }
 .ball {
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background-color: #ff8800;
+  background-color: $color-main;
 }

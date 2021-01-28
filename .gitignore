@@ -52,3 +52,6 @@ public
 
 # vscode
 .vscode
+
+# Local Netlify folder
+.netlify
