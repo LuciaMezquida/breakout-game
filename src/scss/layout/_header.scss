@@ -1,7 +1,8 @@
 .header {
+  height: 6vh;
   &__title {
     font-family: $font-main;
     color: $color-main;
-    padding: 1rem 0 0 1rem;
+    padding: 0.6rem 0 0 1rem;
   }
 }

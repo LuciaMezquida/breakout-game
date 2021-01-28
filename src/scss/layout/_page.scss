@@ -4,13 +4,16 @@
 .score {
   text-align: center;
   font-family: $font-main;
+  color: $color-dark;
+  font-size: 2rem;
+  font-weight: 700;
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
 }
 .grid {
   position: absolute;
