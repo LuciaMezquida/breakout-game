@@ -1,0 +1,40 @@
+{
+	"name": "breakout-game",
+	"version": "1.0.0",
+	"description": "Arkanoid retro game",
+	"dependencies": {
+		"browser-sync": "^2.26.12",
+		"del": "^5.1.0",
+		"eslint": "^7.1.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "*",
+		"gulp-clean-css": "*",
+		"gulp-combine-mq": "*",
+		"gulp-concat": "*",
+		"gulp-html-tag-include": "^1.0.1",
+		"gulp-notify": "*",
+		"gulp-plumber": "*",
+		"gulp-rename": "*",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "*",
+		"gulp-uglify-es": "^2.0.0",
+		"gulp-zip": "*",
+		"run-sequence": "*"
+	},
+	"devDependencies": {
+		"lodash.template": ">=4.5.0"
+	},
+	"scripts": {
+		"start": "./node_modules/.bin/gulp",
+		"docs": "rm -rf docs && ./node_modules/.bin/gulp docs",
+		"push-docs": "rm -rf docs && gulp docs && git add docs/* && git commit -m \"Update docs\" && git push",
+		"deploy": "npm run push-docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com:LuciaMezquida/breakout-game.git"
+	},
+	"author": "Lucia Mezquida",
+	"license": "MIT",
+	"homepage": "./"
+}
