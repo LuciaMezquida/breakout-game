@@ -1,10 +1,13 @@
 "use strict";
 const grid = document.querySelector(".grid");
+const gridStyle = window.getComputedStyle(grid);
+const gridWidth = gridStyle.getPropertyValue("width");
+
 const scoreDisplay = document.querySelector(".score");
 const blockWidth = 70;
 const blockHeight = 16;
 const ballDiameter = 20;
-const boardWidth = 1215;
+const boardWidth = gridWidth.slice(0, gridWidth.length - 2);
 const boardHeight = 500;
 const userWidth = 120;
 
