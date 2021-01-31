@@ -5,7 +5,7 @@
   text-align: center;
   font-family: $font-main;
   color: $color-dark;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 .container {
@@ -19,7 +19,7 @@
   position: absolute;
   width: 1215px;
   height: 500px;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 .block {
   position: absolute;
@@ -51,6 +51,7 @@
 }
 .i-container {
   display: flex;
+  transform: translate(0, 40px);
 }
 .instructions {
   font-family: $font-main;

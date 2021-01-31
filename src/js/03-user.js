@@ -41,7 +41,7 @@ const pauseGame = (ev) => {
       document.removeEventListener("keydown", moveUser);
     } else {
       timerId = setInterval(moveBall, timerInit);
-      timerBall = setInterval(increaseBallVelocity, 2000);
+      // timerBall = setInterval(increaseBallVelocity, 2000);
       document.addEventListener("keydown", moveUser);
     }
   }

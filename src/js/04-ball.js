@@ -23,9 +23,8 @@ const moveBall = () => {
 
 timerId = setInterval(moveBall, timerInit);
 
-const increaseBallVelocity = () => {
-  timerInit--;
-
-  console.log(timerInit);
-};
-timerBall = setInterval(increaseBallVelocity, 2000);
+// const increaseBallVelocity = () => {
+//   timerInit--;
+//   console.log(timerInit);
+// };
+// timerBall = setInterval(increaseBallVelocity, 2000);
