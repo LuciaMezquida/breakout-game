@@ -42,3 +42,17 @@
   border-radius: 20px;
   background-color: $color-main;
 }
+.fa-arrow-circle-left,
+.fa-arrow-circle-right,
+.fa-pause-circle {
+  color: $color-main;
+  font-size: 1.4rem;
+  margin-left: 1.2rem;
+}
+.i-container {
+  display: flex;
+}
+.instructions {
+  font-family: $font-main;
+  margin-left: 0.2rem;
+}

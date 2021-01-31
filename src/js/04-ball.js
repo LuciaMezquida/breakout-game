@@ -13,11 +13,6 @@ drawBall();
 grid.appendChild(ball);
 
 //move ball
-const increaseBallVelocity = () => {
-  timerInit--;
-  console.log(timerInit);
-};
-timerBall = setInterval(increaseBallVelocity, 2000);
 
 const moveBall = () => {
   currentBallPossition[0] += xDirection;
@@ -27,3 +22,10 @@ const moveBall = () => {
 };
 
 timerId = setInterval(moveBall, timerInit);
+
+const increaseBallVelocity = () => {
+  timerInit--;
+
+  console.log(timerInit);
+};
+timerBall = setInterval(increaseBallVelocity, 2000);
