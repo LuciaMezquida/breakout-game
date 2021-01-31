@@ -46,6 +46,7 @@ const checkForCollisions = () => {
     clearInterval(timerId);
     clearInterval(timerBall);
     scoreDisplay.innerHTML = "LOOOOSER!!!!";
+    buttonPlay.classList.remove("hide");
     document.removeEventListener("keydown", moveUser);
   }
 };
@@ -67,8 +68,3 @@ const changeDirection = () => {
     return;
   }
 };
-// const increaseBallVelocity = () => {
-//   timerInit--;
-//   console.log(timerInit);
-// };
-// timerBall = setInterval(increaseBallVelocity, 2000);

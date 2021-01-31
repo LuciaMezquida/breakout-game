@@ -1,5 +1,7 @@
 .score-container {
   height: 10vh;
+  display: flex;
+  align-items: center;
 }
 .score {
   text-align: center;
@@ -72,4 +74,22 @@
 .instructions {
   font-family: $font-main;
   margin-left: 0.2rem;
+}
+.play {
+  margin-left: 2rem;
+  border: none;
+  background-color: $color-main;
+  outline: none;
+  border-radius: 2px;
+  padding: 0.7rem;
+  color: $color-light;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 1.2rem;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.hide {
+  display: none;
 }

@@ -4,6 +4,7 @@ const gridStyle = window.getComputedStyle(grid);
 const gridWidth = gridStyle.getPropertyValue("width");
 
 const scoreDisplay = document.querySelector(".score");
+const buttonPlay = document.querySelector(".play");
 const blockWidth = 70;
 const blockHeight = 16;
 const ballDiameter = 20;
@@ -24,3 +25,7 @@ let currentBallPossition = startBallPossition;
 
 let timerId;
 let timerBall;
+
+buttonPlay.addEventListener("click", () => {
+  location.reload();
+});
