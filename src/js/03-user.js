@@ -14,9 +14,6 @@ grid.appendChild(user);
 
 //move user
 const moveUser = (ev) => {
-  if (ev.key === " ") {
-    console.log("space");
-  }
   switch (ev.key) {
     case "ArrowLeft":
       if (currentUserPossition[0] > 10) {
@@ -36,12 +33,15 @@ document.addEventListener("keydown", moveUser);
 
 const pauseGame = (ev) => {
   if (ev.key === " ") {
-    if (timerId) {
+    if (timerId || timerBall) {
       clearInterval(timerId);
+      clearInterval(timerBall);
       timerId = null;
+      timerBall = null;
       document.removeEventListener("keydown", moveUser);
     } else {
-      timerId = setInterval(moveBall, 30);
+      timerId = setInterval(moveBall, timerInit);
+      timerBall = setInterval(increaseBallVelocity, 2000);
       document.addEventListener("keydown", moveUser);
     }
   }

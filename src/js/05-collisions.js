@@ -19,6 +19,7 @@ const checkForCollisions = () => {
       if (blocks.length === 0) {
         scoreDisplay.innerHTML = "YOU WIN!!!";
         clearInterval(timerId);
+        clearInterval(timerBall);
         document.removeEventListener("keydown", moveUser);
       }
     }
@@ -43,6 +44,7 @@ const checkForCollisions = () => {
   //check for game over
   if (currentBallPossition[1] <= 0) {
     clearInterval(timerId);
+    clearInterval(timerBall);
     scoreDisplay.innerHTML = "LOOOOSER!!!!";
     document.removeEventListener("keydown", moveUser);
   }
@@ -65,3 +67,8 @@ const changeDirection = () => {
     return;
   }
 };
+// const increaseBallVelocity = () => {
+//   timerInit--;
+//   console.log(timerInit);
+// };
+// timerBall = setInterval(increaseBallVelocity, 2000);

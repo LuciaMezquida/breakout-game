@@ -13,7 +13,7 @@ class Block {
 //all my blocks
 let blocks = [];
 for (let j = 470; j >= 320; j -= 25) {
-  for (let i = 10; i <= 1130; i += 80) {
+  for (let i = 10; i < boardWidth - blockWidth; i += 80) {
     blocks.push(new Block(i, j));
   }
 }

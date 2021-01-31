@@ -11,6 +11,7 @@ const userWidth = 120;
 let xDirection = 2;
 let yDirection = 2;
 let score = 0;
+let timerInit = 30;
 
 const startUserPossition = [545, 10];
 let currentUserPossition = startUserPossition;
@@ -19,3 +20,4 @@ const startBallPossition = [600, 40];
 let currentBallPossition = startBallPossition;
 
 let timerId;
+let timerBall;
