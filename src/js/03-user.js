@@ -22,7 +22,7 @@ const moveUser = (ev) => {
       }
       break;
     case "ArrowRight":
-      if (currentUserPossition[0] < boardWidth - blockWidth) {
+      if (currentUserPossition[0] < boardWidth - blockWidth * 2) {
         currentUserPossition[0] += 20;
         drawUser();
       }

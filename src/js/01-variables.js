@@ -1,20 +1,21 @@
 "use strict";
 const grid = document.querySelector(".grid");
 const scoreDisplay = document.querySelector(".score");
-const blockWidth = 100;
-const blockHeight = 20;
+const blockWidth = 70;
+const blockHeight = 16;
 const ballDiameter = 20;
-const boardWidth = 550;
-const boardHeight = 300;
+const boardWidth = 1215;
+const boardHeight = 500;
+const userWidth = 120;
 
 let xDirection = 2;
 let yDirection = 2;
 let score = 0;
 
-const startUserPossition = [230, 10];
+const startUserPossition = [545, 10];
 let currentUserPossition = startUserPossition;
 
-const startBallPossition = [270, 40];
+const startBallPossition = [600, 40];
 let currentBallPossition = startBallPossition;
 
 let timerId;

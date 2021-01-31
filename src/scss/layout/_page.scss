@@ -17,21 +17,23 @@
 }
 .grid {
   position: absolute;
-  width: 560px;
-  height: 300px;
+  width: 1215px;
+  height: 500px;
   border: 1px solid black;
 }
 .block {
   position: absolute;
-  width: 100px;
-  height: 20px;
+  width: 70px;
+  height: 16px;
   background-color: $color-main;
+  border-radius: 2px;
 }
 .user {
   position: absolute;
-  width: 100px;
-  height: 20px;
+  width: 120px;
+  height: 17px;
   background-color: $color-main;
+  border-radius: 2px;
 }
 .ball {
   position: absolute;

@@ -26,7 +26,7 @@ const checkForCollisions = () => {
   //check for user collisions
   if (
     currentBallPossition[0] > currentUserPossition[0] &&
-    currentBallPossition[0] < currentUserPossition[0] + blockWidth &&
+    currentBallPossition[0] < currentUserPossition[0] + userWidth &&
     currentBallPossition[1] > currentUserPossition[1] &&
     currentBallPossition[1] < currentUserPossition[1] + blockHeight
   ) {
