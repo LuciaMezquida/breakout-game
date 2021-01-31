@@ -16,10 +16,10 @@ let yDirection = 2;
 let score = 0;
 let timerInit = 20;
 
-const startUserPossition = [545, 10];
+const startUserPossition = [boardWidth - boardWidth / 2 - 60, 10];
 let currentUserPossition = startUserPossition;
 
-const startBallPossition = [600, 40];
+const startBallPossition = [boardWidth - boardWidth / 2, 40];
 let currentBallPossition = startBallPossition;
 
 let timerId;

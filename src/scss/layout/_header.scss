@@ -1,5 +1,8 @@
 .header {
   height: 6vh;
+  @media all and(max-width: 370px) {
+    display: none;
+  }
   &__title {
     font-family: $font-main;
     color: $color-main;

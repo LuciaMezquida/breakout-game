@@ -7,6 +7,10 @@
   color: $color-dark;
   font-size: 2.8rem;
   font-weight: 700;
+  @media all and(max-width: 370px) {
+    margin-top: 50px;
+    font-size: 1.8rem;
+  }
 }
 .container {
   display: flex;
@@ -19,8 +23,20 @@
   position: absolute;
   width: 1215px;
   height: 500px;
-  // border: 1px solid black;
+  @media all and(max-width: 1200px) {
+    width: 1000px;
+  }
+  @media all and(max-width: 768px) {
+    width: 700px;
+  }
+  @media all and(max-width: 568px) {
+    width: 420px;
+  }
+  @media all and(max-width: 370px) {
+    width: 360px;
+  }
 }
+
 .block {
   position: absolute;
   width: 70px;
