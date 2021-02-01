@@ -2,7 +2,7 @@ buttonPlay.addEventListener("click", () => {
   location.reload();
 });
 
-if (boardWidth <= 768) {
+if (boardWidth <= 1024) {
   instructions.classList.add("hide");
   touchButtons.forEach((btn) => btn.classList.remove("hide"));
 }
