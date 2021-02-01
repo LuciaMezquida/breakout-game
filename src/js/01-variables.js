@@ -2,6 +2,9 @@
 const grid = document.querySelector(".grid");
 const gridStyle = window.getComputedStyle(grid);
 const gridWidth = gridStyle.getPropertyValue("width");
+const instructions = document.querySelector(".i-container");
+// const touchButtons = document.querySelector(".touch-buttons");
+const touchButtons = document.querySelectorAll(".btn");
 
 const scoreDisplay = document.querySelector(".score");
 const buttonPlay = document.querySelector(".play");
@@ -16,15 +19,10 @@ let xDirection = 2;
 let yDirection = 2;
 let score = 0;
 let timerInit = 25;
+let timerId;
 
 const startUserPossition = [boardWidth - boardWidth / 2 - 60, 10];
 let currentUserPossition = startUserPossition;
 
 const startBallPossition = [boardWidth - boardWidth / 2, 40];
 let currentBallPossition = startBallPossition;
-
-let timerId;
-
-buttonPlay.addEventListener("click", () => {
-  location.reload();
-});

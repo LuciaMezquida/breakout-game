@@ -90,6 +90,23 @@
     transform: scale(0.95);
   }
 }
+.touch-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  .btn {
+    border: none;
+    background-color: $color-main;
+    outline: none;
+    border-radius: 2px;
+    padding: 0.7rem;
+    color: $color-light;
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
 .hide {
   display: none;
 }
