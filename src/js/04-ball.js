@@ -23,8 +23,10 @@ const moveBall = () => {
 
 timerId = setInterval(moveBall, timerInit);
 
-// const increaseBallVelocity = () => {
-//   timerInit--;
-//   console.log(timerInit);
-// };
-// timerBall = setInterval(increaseBallVelocity, 2000);
+const increaseTimerInit = () => {
+  if (score % 5 === 0 && score !== 0) {
+    timerInit -= 1;
+    clearInterval(timerId);
+    timerId = setInterval(moveBall, timerInit);
+  }
+};

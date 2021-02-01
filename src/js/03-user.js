@@ -33,15 +33,12 @@ document.addEventListener("keydown", moveUser);
 
 const pauseGame = (ev) => {
   if (ev.key === " ") {
-    if (timerId || timerBall) {
+    if (timerId) {
       clearInterval(timerId);
-      clearInterval(timerBall);
       timerId = null;
-      timerBall = null;
       document.removeEventListener("keydown", moveUser);
     } else {
       timerId = setInterval(moveBall, timerInit);
-      // timerBall = setInterval(increaseBallVelocity, 2000);
       document.addEventListener("keydown", moveUser);
     }
   }

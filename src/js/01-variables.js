@@ -15,7 +15,7 @@ const userWidth = 120;
 let xDirection = 2;
 let yDirection = 2;
 let score = 0;
-let timerInit = 20;
+let timerInit = 25;
 
 const startUserPossition = [boardWidth - boardWidth / 2 - 60, 10];
 let currentUserPossition = startUserPossition;
@@ -24,7 +24,6 @@ const startBallPossition = [boardWidth - boardWidth / 2, 40];
 let currentBallPossition = startBallPossition;
 
 let timerId;
-let timerBall;
 
 buttonPlay.addEventListener("click", () => {
   location.reload();

@@ -13,13 +13,13 @@ const checkForCollisions = () => {
       blocks.splice(i, 1);
       changeDirection();
       score++;
+      increaseTimerInit();
       scoreDisplay.innerHTML = score;
 
       //check for win
       if (blocks.length === 0) {
         scoreDisplay.innerHTML = "YOU WIN!!!";
         clearInterval(timerId);
-        clearInterval(timerBall);
         document.removeEventListener("keydown", moveUser);
       }
     }
@@ -44,7 +44,6 @@ const checkForCollisions = () => {
   //check for game over
   if (currentBallPossition[1] <= 0) {
     clearInterval(timerId);
-    clearInterval(timerBall);
     scoreDisplay.innerHTML = "LOOOOSER!!!!";
     buttonPlay.classList.remove("hide");
     document.removeEventListener("keydown", moveUser);
