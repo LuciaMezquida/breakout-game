@@ -18,7 +18,7 @@ const userWidth = 120;
 let xDirection = 2;
 let yDirection = 2;
 let score = 0;
-let timerInit = 25;
+let timerInit = 22;
 let timerId;
 
 const startUserPossition = [boardWidth - boardWidth / 2 - 60, 10];
