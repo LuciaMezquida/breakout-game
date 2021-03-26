@@ -44,7 +44,7 @@ const checkForCollisions = () => {
   //check for game over
   if (currentBallPossition[1] <= 0) {
     clearInterval(timerId);
-    scoreDisplay.innerHTML = "LOOOOSER!!!!";
+    scoreDisplay.innerHTML = "OH, NOOO!!!!";
     buttonPlay.classList.remove("hide");
     document.removeEventListener("keydown", moveUser);
   }
