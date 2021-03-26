@@ -9,6 +9,7 @@ if (boardWidth <= 1024) {
 
 touchButtons.forEach((btn) =>
   btn.addEventListener("click", (ev) => {
+    ev.preventDefault();
     if (ev.target.value === "left") {
       currentUserPossition[0] -= 20;
       drawUser();
